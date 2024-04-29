@@ -7,6 +7,7 @@ public class Bank {
 	final static int pincode = 54321;
 	private static int balance = 100000;
 	static int amt;
+	static int withdrawamount;
 
 	public static void atm() {
 		System.out.println("Welcome to the ATM of ABCD Bank");
@@ -43,7 +44,7 @@ public class Bank {
 		
 			} else if (amt > 10000) {			
 				System.out.println("You cannot deposit " + amt + " to your Bank account");
-				System.out.println("Daily Deposit limit is = 10,000 rupees.");
+				System.out.println("Daily Deposit limit is 10,000 rupees.");
 			}
 			}
 			break;
@@ -52,7 +53,7 @@ public class Bank {
 			System.out.println("Your account balance is "+balance);
 			while(true) {
 			System.out.print("Enter the amount to be withdrawn = ");
-			int withdrawamount = scr.nextInt();
+			withdrawamount = scr.nextInt();
 			if (withdrawamount <= 15000) {
 				System.out.print("Enter your pincode = ");
 				while (true) {
@@ -78,7 +79,20 @@ public class Bank {
 			break;
 			
 		case 3:
-			System.out.println("Available balance is "+balance+ " rupees");
+			System.out.print("Enter your pincode = ");
+			while (true) {
+				int pinCode = scr.nextInt();
+				if (pinCode == pincode) {
+					System.out.println("Available balance is "+balance+ " rupees");
+					break;
+					
+				}
+				else {
+					System.out.println("Pincode is incorrect");
+					System.out.print("Re-Enter your pincode = ");
+				}
+			}
+			
 		}
 		
 			
