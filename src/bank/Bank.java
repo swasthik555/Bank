@@ -3,11 +3,18 @@ package bank;
 import java.util.Scanner;
 
 public class Bank {
+	
+	public static void main(String[] args) {
+
+		Bank b = new Bank();
+		b.atm();
+
+	}
 
 	final int pincode = 54321;
 	private int balance = 50000;
 	int amt;
-	int withdrawamount;
+	int withdrawamount;  
 
 	public void atm() {
 		System.out.println("Welcome to the ATM of ABCD Bank");
@@ -54,15 +61,17 @@ public class Bank {
 			break;
 		case 2:
 			System.out.println("Daily limit for withdrawal of money is 15,000 rupees.");
-			System.out.println("Your account balance is "+balance);
+			System.out.println("Available balance is "+balance);
 			while(true) {
 			System.out.print("Enter the amount to be withdrawn = ");
 			withdrawamount = scr.nextInt();
+			System.out.println("---------------------------------------");
 			if (withdrawamount <= 15000) {
 				System.out.print("Enter your pincode = ");
 				while (true) {
 					int pinCode = scr.nextInt();
 					if (pinCode == pincode) {
+						System.out.println("--------------------------------------------");
 						System.out.println("Collect your Money");
 						System.out.println("Your available balance is "+(balance -withdrawamount));
 						System.out.println("Thank you for using ABCD ATM.");
@@ -87,6 +96,7 @@ public class Bank {
 			while (true) {
 				int pinCode = scr.nextInt();
 				if (pinCode == pincode) {
+					System.out.println("-----------------------------------------");
 					System.out.println("Available balance is "+balance+ " rupees");
 					break;
 					
