@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Bank {
 
 	final int pincode = 54321;
-	private int balance = 100000;
+	private int balance = 50000;
 	int amt;
 	int withdrawamount;
 
@@ -18,6 +18,8 @@ public class Bank {
 		Scanner scr = new Scanner(System.in);
 		System.out.print("Enter your choice = ");
 		int choice = scr.nextInt();
+		
+		System.out.println("-----------------------");
 
 		switch (choice) {
 		case 1:
@@ -25,11 +27,13 @@ public class Bank {
 			while(true) {
 			System.out.print("Enter amount to be deposited = ");
 			amt = scr.nextInt();
+			System.out.println("---------------------------------");
 			if (amt <= 10000) {
 				System.out.print("Enter your pincode = ");
 				while (true) {
 				int pinCode = scr.nextInt();
 				if (pinCode == pincode) {
+					System.out.println("-------------------------------");
 					System.out.println("Your money has been deposited");
 					System.out.println("Your available Balance is " + (balance + amt));
 					System.out.println("Thank you for using ABCD ATM.");
