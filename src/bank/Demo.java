@@ -1,10 +1,12 @@
 package bank;
 
-public class Demo extends Bank{
+public class Demo{
 	
 	public static void main(String[] args) {
 		
-		Bank.atm();
+		Bank b = new Bank();
+		b.atm();
+		
 	}
 
 }

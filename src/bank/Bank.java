@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class Bank {
 
-	final static int pincode = 54321;
-	private static int balance = 100000;
-	static int amt;
-	static int withdrawamount;
+	final int pincode = 54321;
+	private int balance = 100000;
+	int amt;
+	int withdrawamount;
 
-	public static void atm() {
+	public void atm() {
 		System.out.println("Welcome to the ATM of ABCD Bank");
 		System.out.println("-------------------------------");
 		System.out.println("Deposit money Press 1");
@@ -49,7 +49,7 @@ public class Bank {
 			}
 			break;
 		case 2:
-			System.out.println("Maximum withdraw limit is 15,000 rupees.");
+			System.out.println("Daily limit for withdrawal of money is 15,000 rupees.");
 			System.out.println("Your account balance is "+balance);
 			while(true) {
 			System.out.print("Enter the amount to be withdrawn = ");
@@ -73,7 +73,7 @@ public class Bank {
 				break;
 			}else if (withdrawamount > 15000) {	
 				System.out.println("You cannot withdrawn " + withdrawamount + " Rupees");
-				System.out.println("Maximum limit for withdrawal of money is 15,000 rupees");
+				System.out.println("Daily limit for withdrawal of money is 15,000 rupees");
 					}
 				}
 			break;
